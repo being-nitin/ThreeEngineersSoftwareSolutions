@@ -6579,6 +6579,15 @@
                 <img class="landing-image" src="../images/patient_information.png" alt="">
             </div>
         </div>
+        <script>
+            function printDetails() {
+                const originalContent = document.body.innerHTML;
+                const printContent = document.querySelector(".landing-wrapper").outerHTML;
+                document.body.innerHTML = printContent;
+                window.print();
+                document.body.innerHTML = originalContent;
+            }
+        </script>
     </div>
 
 
