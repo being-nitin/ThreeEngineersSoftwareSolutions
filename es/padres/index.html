@@ -1,10 +1,6 @@
 <!DOCTYPE html>
 <html lang="es-ES">
-  <!-- Mirrored from illumine.app/es/padres/ by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 09 Nov 2024 09:03:41 GMT -->
-  <!-- Added by HTTrack --><meta
-    http-equiv="content-type"
-    content="text/html;charset=UTF-8"
-  /><!-- /Added by HTTrack -->
+  <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -12903,21 +12899,15 @@ The IP2Location Redirection is using IP2Location LITE geolocation database. Plea
       /(trident|msie)/i.test(navigator.userAgent) &&
         document.getElementById &&
         window.addEventListener &&
-        window.addEventListener(
-          "hashchange",
-          function () {
-            var t,
-              e = location.hash.substring(1);
-            /^[A-z0-9_-]+$/.test(e) &&
-              (t = document.getElementById(e)) &&
-              (/^(?:a|select|input|button|textarea)$/i.test(t.tagName) ||
-                (t.tabIndex = -1),
-              t.focus());
-          },
-          !1
-        );
+        window.addEventListener("hashchange", function () {
+          var t,
+            e = location.hash.substring(1);
+          /^[A-z0-9_-]+$/.test(e) &&
+            (t = document.getElementById(e)) &&
+            (/^(?:a|select|input|button|textarea)$/i.test(t.tagName) ||
+              (t.tabIndex = -1),
+            t.focus());
+        });
     </script>
   </body>
-
-  <!-- Mirrored from illumine.app/es/padres/ by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 09 Nov 2024 09:03:41 GMT -->
 </html>
