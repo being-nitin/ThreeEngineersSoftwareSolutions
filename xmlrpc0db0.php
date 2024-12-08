@@ -2,13 +2,13 @@
 	<service>
 		<engineName>WordPress</engineName>
 		<engineLink>https://wordpress.org/</engineLink>
-		<homePageLink>https://illumine.app/</homePageLink>
+		<homePageLink>https://3engineers.in/</homePageLink>
 		<apis>
-			<api name="WordPress" blogID="1" preferred="true" apiLink="https://illumine.app/xmlrpc.php" />
-			<api name="Movable Type" blogID="1" preferred="false" apiLink="https://illumine.app/xmlrpc.php" />
-			<api name="MetaWeblog" blogID="1" preferred="false" apiLink="https://illumine.app/xmlrpc.php" />
-			<api name="Blogger" blogID="1" preferred="false" apiLink="https://illumine.app/xmlrpc.php" />
-				<api name="WP-API" blogID="1" preferred="false" apiLink="https://illumine.app/wp-json/" />
+			<api name="WordPress" blogID="1" preferred="true" apiLink="https://3engineers.in/xmlrpc.php" />
+			<api name="Movable Type" blogID="1" preferred="false" apiLink="https://3engineers.in/xmlrpc.php" />
+			<api name="MetaWeblog" blogID="1" preferred="false" apiLink="https://3engineers.in/xmlrpc.php" />
+			<api name="Blogger" blogID="1" preferred="false" apiLink="https://3engineers.in/xmlrpc.php" />
+				<api name="WP-API" blogID="1" preferred="false" apiLink="https://3engineers.in/wp-json/" />
 			</apis>
 	</service>
 </rsd>
