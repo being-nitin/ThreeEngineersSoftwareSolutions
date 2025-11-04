@@ -287,6 +287,7 @@
 			line-height: 1.3em;
 		}
 
+	
 		h2,
 		.entry-content h2,
 		.entry-content h2 a {
@@ -5084,7 +5085,7 @@ flexibility(document.documentElement);
 	<link rel="icon" href="/images/improovedlogo.png" sizes="192x192" />
 	<link rel="apple-touch-icon" href="/images/improovedlogo.png" />
 	<meta name="msapplication-TileImage" content="" />
-	<style type="text/css" id="wp-custom-css">
+	 <style type="text/css" id="wp-custom-css">
 		ul.sf-menu li.menu-item a {
 			font-size: 20px;
 		}
@@ -5312,7 +5313,7 @@ flexibility(document.documentElement);
 																	<li id="menu-item-6741"
 																		class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6741">
 																		<a href="doctor/index.html"
-																			class="menu-link">Doctors</a>
+																			class="menu-link">psychiatrist</a>
 																	</li>
 																	<li id="menu-item-6674"
 																		class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6674">
@@ -5341,12 +5342,24 @@ flexibility(document.documentElement);
 																	</li>
 																</ul>
 															</li>
-															<li id="menu-item-7202"
-																class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7202">
-																<a href="/" class="menu-link">Pricing</a>
+														 <li id="menu-item-7202" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-7202">
+	                            <a href="/" class="menu-link">Pricing</a>
+	                             <button class="ast-menu-toggle" aria-expanded="false">
+		                            <span class="screen-reader-text">Menu Toggle</span>
+		                            <span class="ast-icon icon-arrow"></span>
+	                             </button>
+	                            <ul class="sub-menu">
+		                           <li id="menu-item-7203"
+			                         class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7203">
+			                          <a href="" class="menu-link">6 Months</a>
+		                           </li>
+		                           <li id="menu-item-7204"
+			                           class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7204">
+			                          <a href="" class="menu-link">12 Months</a>
+		                            </li>
+	                             </ul>
+                              </li>
 
-																<!-- local-pricing/index.html -->
-															</li>
 															<li id="menu-item-6958"
 																class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-6958">
 																<a href="#" class="menu-link">Resources</a><button
@@ -6253,14 +6266,7 @@ flexibility(document.documentElement);
 														data-widget_type="button.default">
 														<div class="elementor-widget-container">
 															<div class="elementor-button-wrapper">
-																<a class="elementor-button elementor-button-link elementor-size-sm"
-																	href="demo/index.html"
-																	style="background-color: #333d78;">
-																	<span class="elementor-button-content-wrapper">
-																		<span class="elementor-button-text">BOOK A
-																			DEMO</span>
-																	</span>
-																</a>
+	
 															</div>
 														</div>
 													</div>
@@ -7759,13 +7765,75 @@ flexibility(document.documentElement);
 																			User Dashboard</a>
 																	</h3>
 
-																	<p class="elementor-icon-box-description">
-																		Provides an overview of user-related
-																		information, allowing easy access to relevant
-																		details for each type of user.<br><a href="#">
-																			<span
-																				style="color:#1A998A;font-size:16px">Know
-																				More →</span></a> </p>
+	          <style>
+  .elementor-icon-box-description {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    color: #333;
+    line-height: 1.6;
+  }
+
+  .toggle {
+    display: none; /* hide checkbox */
+  }
+
+  .know-more, .show-less {
+    color: #1A998A;
+    font-size: 16px;
+    cursor: pointer;
+    text-decoration: none;
+  }
+
+  .know-more:hover,
+  .show-less:hover {
+    color: #147a6f;
+    text-decoration: underline;
+  }
+
+  /* hidden by default */
+  .extra-content {
+    display: none;
+    margin-top: 8px;
+  }
+
+  /* when checkbox checked → show extra content */
+  .toggle:checked ~ .extra-content {
+    display: block;
+  }
+
+  /* when checked → hide "Know More" */
+  .toggle:checked + .know-more {
+    display: none;
+  }
+
+  /* when checked → show "Show Less" inside expanded section */
+  .toggle:checked ~ .extra-content .show-less {
+    display: inline-block;
+    margin-top: 8px;
+  }
+
+  /* hide "Show Less" initially */
+  .show-less {
+    display: none;
+  }
+</style>
+
+<p class="elementor-icon-box-description">
+  Provides an overview of user-related information, allowing easy access to relevant details for each type of user.
+</p>
+
+<input type="checkbox" id="toggle-info" class="toggle">
+
+<label for="toggle-info" class="know-more">Know More →</label>
+
+<div class="extra-content">
+  <p class="elementor-icon-box-description">
+    This section provides deeper insights into each user's activity, preferences, and access permissions. 
+    You can view analytics, manage roles, and personalize settings efficiently within the dashboard interface.
+  </p>
+
+  <label for="toggle-info" class="show-less">Show Less ←</label>
+</div>
 
 																</div>
 
@@ -7820,14 +7888,29 @@ flexibility(document.documentElement);
 																			Patient Information</a>
 																	</h3>
 
-																	<p class="elementor-icon-box-description">
-																		A dedicated section displaying all critical
-																		patient information, including contact details,
-																		insurance information, and emergency
-																		contacts.<br><a href="#">
-																			<span
-																				style="color:#C85168;font-size:16px">Know
-																				More →</span></a> </p>
+																<p class="elementor-icon-box-description">
+  A dedicated section displaying all critical patient information, including contact details,
+  insurance information, and emergency contacts.
+</p>
+
+<!-- Hidden checkbox controls open/close -->
+<input type="checkbox" id="toggle-patient" class="toggle">
+
+<!-- Know More -->
+<label for="toggle-patient" class="know-more" style="color:#C85168;">Know More →</label>
+
+<!-- Expanded Content -->
+<div class="extra-content">
+  <p class="elementor-icon-box-description">
+    A dedicated section that provides psychiatrists and staff with comprehensive access to patient
+    information, including personal details, contact data, insurance coverage, and emergency
+    contacts. This ensures faster access to vital information, better coordination during treatment,
+    and improved patient safety in critical situations.
+  </p>
+
+  <!-- Show Less -->
+  <label for="toggle-patient" class="show-less" style="color:#C85168;">Show Less ←</label>
+</div>
 
 																</div>
 
@@ -7879,16 +7962,29 @@ flexibility(document.documentElement);
 																			Add Appointment </a>
 																	</h3>
 
-																	<p class="elementor-icon-box-description">
-																		Simplifies the process of scheduling
-																		appointments, allowing staff and doctors to
-																		manage patient bookings and maintain a seamless
-																		calendar.
-																		<br><a href="#">
-																			<span
-																				style="color:#3295DC;font-size:16px">Know
-																				More →</span></a>
-																	</p>
+																<p class="elementor-icon-box-description">
+  Simplifies the process of scheduling appointments, allowing staff and doctors to
+  manage patient bookings and maintain a seamless calendar.
+</p>
+
+<!-- Hidden checkbox controls expand/collapse -->
+<input type="checkbox" id="toggle-appointment" class="toggle">
+
+<!-- “Know More →” label (blue text for this one) -->
+<label for="toggle-appointment" class="know-more" style="color:#3295DC;">Know More →</label>
+
+<!-- Expanded content -->
+<div class="extra-content">
+  <p class="elementor-icon-box-description">
+    The appointment scheduling system provides a user-friendly calendar view that allows
+    both staff and doctors to manage patient bookings efficiently. It supports automated
+    reminders, conflict detection, and integration with patient records to ensure a seamless experience.
+  </p>
+
+  <!-- “Show Less ←” to collapse -->
+  <label for="toggle-appointment" class="show-less" style="color:#3295DC;">Show Less ←</label>
+</div>
+
 
 																</div>
 
@@ -8112,14 +8208,28 @@ flexibility(document.documentElement);
 																	</h3>
 
 																	<p class="elementor-icon-box-description">
-																		Our solutions prioritize patient comfort and
-																		accessibility, creating seamless experiences
-																		that enhance satisfaction and trust.
-																		<br><a href="#">
-																			<span
-																				style="color:#6F62C9;font-size:16px">Know
-																				More →</span></a>
-																	</p>
+  Our solutions prioritize patient comfort and accessibility, creating seamless experiences
+  that enhance satisfaction and trust.
+</p>
+
+<!-- Hidden checkbox to control toggle -->
+<input type="checkbox" id="toggle-comfort" class="toggle">
+
+<!-- Know More link -->
+<label for="toggle-comfort" class="know-more" style="color:#6F62C9;">Know More →</label>
+
+<!-- Expanded content -->
+<div class="extra-content">
+  <p class="elementor-icon-box-description">
+    Our platform is designed with a patient-first approach, focusing on ease of use, clear navigation,
+    and accessibility for individuals of all ages. From intuitive interfaces to inclusive design
+    standards, every feature ensures comfort, reduces stress during consultations, and fosters
+    stronger trust between patients and psychiatrists throughout their care journey.
+  </p>
+
+  <!-- Show Less link -->
+  <label for="toggle-comfort" class="show-less" style="color:#6F62C9;">Show Less ←</label>
+</div>
 
 																</div>
 
@@ -8176,15 +8286,30 @@ flexibility(document.documentElement);
 																		</a>
 																	</h3>
 
-																	<p class="elementor-icon-box-description">
-																		Simplify documentation with tools that ensure
-																		accurate records and support better patient
-																		care.
-																		<br><a href=#>
-																			<span
-																				style="color:#C85168;font-size:16px">Know
-																				More →</span></a>
-																	</p>
+																	<!-- Simplify Documentation Section -->
+<p class="elementor-icon-box-description">
+  Simplify documentation with tools that ensure accurate records and support better patient care.
+</p>
+
+<!-- Hidden checkbox for toggling -->
+<input type="checkbox" id="toggle-docs" class="toggle">
+
+<!-- Know More link -->
+<label for="toggle-docs" class="know-more" style="color:#C85168;">Know More →</label>
+
+<!-- Expanded content -->
+<div class="extra-content">
+  <p class="elementor-icon-box-description">
+    Our documentation system streamlines the record-keeping process for psychiatrists, making it easy to
+    capture, review, and update patient notes securely. It reduces manual effort, minimizes errors, and
+    ensures all medical and therapeutic records remain accessible and compliant with healthcare standards —
+    ultimately supporting more accurate diagnoses and better continuity of care.
+  </p>
+
+  <!-- Show Less link -->
+  <label for="toggle-docs" class="show-less" style="color:#C85168;">Show Less ←</label>
+</div>
+
 
 																</div>
 
@@ -8292,15 +8417,29 @@ flexibility(document.documentElement);
 																		</a>
 																	</h3>
 
-																	<p class="elementor-icon-box-description">
-																		At 3Engineers, we harness advanced technology to
-																		optimize healthcare processes, ensuring accuracy
-																		and efficiency in every step.
-																		<br><a href="#">
-																			<span
-																				style="color:#1A998A;font-size:16px">Know
-																				More →</span></a>
-																	</p>
+																	<!-- 3Engineers Section -->
+<p class="elementor-icon-box-description">
+  At 3Engineers, we harness advanced technology to optimize healthcare processes, ensuring accuracy and efficiency in every step.
+</p>
+
+<!-- Hidden checkbox for toggling -->
+<input type="checkbox" id="toggle-tech" class="toggle">
+
+<!-- Know More link -->
+<label for="toggle-tech" class="know-more" style="color:#1A998A;">Know More →</label>
+
+<!-- Expanded content -->
+<div class="extra-content">
+  <p class="elementor-icon-box-description">
+    3Engineers integrates intelligent automation, secure data systems, and innovative analytics to support psychiatrists and healthcare professionals.
+    Our goal is to simplify workflows — from patient data management to treatment planning — while maintaining high standards of accuracy, security, and care.
+    This ensures both practitioners and patients benefit from a smarter, more connected healthcare ecosystem.
+  </p>
+
+  <!-- Show Less link -->
+  <label for="toggle-tech" class="show-less" style="color:#1A998A;">Show Less ←</label>
+</div>
+
 
 																</div>
 
@@ -8435,16 +8574,25 @@ flexibility(document.documentElement);
 																			View Medical History </a>
 																	</h3>
 
-																	<p class="elementor-icon-box-description">
-																		Displays the complete medical history of
-																		patients, including previous diagnoses,
-																		treatments, and ongoing conditions, providing a
-																		holistic view for healthcare providers.
-																		<br><a href="#">
-																			<span
-																				style="color:#6F62C9;font-size:16px">Know
-																				More →</span></a>
-																	</p>
+													
+<p class="elementor-icon-box-description">
+  Displays the complete medical history of patients, including previous diagnoses, treatments, and ongoing conditions, providing a holistic view for healthcare providers.
+</p>
+
+<input type="checkbox" id="toggle-history" class="toggle">
+
+
+<label for="toggle-history" class="know-more" style="color:#6F62C9;">Know More →</label>
+
+<div class="extra-content">
+  <p class="elementor-icon-box-description">
+    This section offers psychiatrists and healthcare professionals a detailed view of each patient’s medical background — covering prior diagnoses, treatment outcomes, medication records, and current health conditions. 
+    By consolidating all relevant medical data in one place, it enables more informed decisions, continuity of care, and personalized treatment planning.
+  </p>
+
+  <label for="toggle-history" class="show-less" style="color:#6F62C9;">Show Less ←</label>
+</div>
+
 
 																</div>
 
@@ -8498,14 +8646,23 @@ flexibility(document.documentElement);
 																			View Patient Information </a>
 																	</h3>
 
-																	<p class="elementor-icon-box-description">
-																		A dedicated section displaying all critical
-																		patient information, including contact details,
-																		insurance information, and emergency
-																		contacts.<br><a href="#">
-																			<span
-																				style="color:#C85168;font-size:16px">Know
-																				More →</span></a> </p>
+<p class="elementor-icon-box-description">
+  A dedicated section displaying all critical patient information, including contact details, insurance information, and emergency contacts.
+</p>
+
+<input type="checkbox" id="toggle-patient-info" class="toggle">
+
+<label for="toggle-patient-info" class="know-more" style="color:#C85168;">Know More →</label>
+
+<div class="extra-content">
+  <p class="elementor-icon-box-description">
+    This section provides psychiatrists and staff with a centralized view of vital patient information — including demographic data, contact details, insurance status, and emergency contacts. 
+    It enhances accessibility, reduces administrative delays, and ensures quick decision-making during emergencies or routine consultations.
+  </p>
+
+  <label for="toggle-patient-info" class="show-less" style="color:#C85168;">Show Less ←</label>
+</div>
+
 
 																</div>
 
@@ -8612,16 +8769,25 @@ flexibility(document.documentElement);
 																			View Role Based Access </a>
 																	</h3>
 
-																	<p class="elementor-icon-box-description">
-																		The system assigns tailored permissions to
-																		Doctors, Patients, Staff, Admins, and Super
-																		Admins, ensuring secure data access and
-																		streamlined workflows.
-																		<br><a href="#">
-																			<span
-																				style="color:#1A998A;font-size:16px">Know
-																				More →</span></a>
-																	</p>
+															
+<p class="elementor-icon-box-description">
+  The system assigns tailored permissions to Psychiatrists, Patients, Staff, Admins, and Super Admins, ensuring secure data access and streamlined workflows.
+</p>
+
+<input type="checkbox" id="toggle-permissions" class="toggle">
+
+<label for="toggle-permissions" class="know-more" style="color:#1A998A;">Know More →</label>
+
+<div class="extra-content">
+  <p class="elementor-icon-box-description">
+    Each user role within the system is granted specific access rights to maintain security and operational efficiency. 
+    Psychiatrists can manage patient records and treatment histories, staff can oversee scheduling and documentation, 
+    while Admins and Super Admins have complete control over configurations, analytics, and user management. 
+    This hierarchical permission model ensures data confidentiality and smooth collaboration across all user levels.
+  </p>
+
+  <label for="toggle-permissions" class="show-less" style="color:#1A998A;">Show Less ←</label>
+</div>
 
 																</div>
 
@@ -8801,13 +8967,8 @@ flexibility(document.documentElement);
 																	</h3>
 
 																	<p class="elementor-icon-box-description">
-																		Enables doctors and patients to view issued
-																		prescriptions, including medication details,
-																		dosage instructions, and renewal information.
-																		<br><a href="childcare-crm/index.html">
-																			<span
-																				style="color:#6F62C9;font-size:16px">Know
-																				More →</span></a>
+																		Enables psychiatrists and patients to view and manage issued prescriptions, including detailed medication information, dosage instructions, and renewal schedules. This feature helps psychiatrists monitor treatment plans effectively, ensures patients adhere to their prescribed medications, and simplifies ongoing mental health care management.
+																		
 																	</p>
 
 																</div>
@@ -8859,10 +9020,7 @@ flexibility(document.documentElement);
 																	</h3>
 
 																	<p class="elementor-icon-box-description">
-																		Manage and store detailed profiles for all
-																		users, including patients, doctors, staff, and
-																		administrators, ensuring accurate records and
-																		seamless system interaction. </p>
+																		Manage and securely store detailed profiles for all users, including patients, psychiatrists, staff, and administrators, ensuring accurate records, personalized access, and seamless interaction across the entire system. </p>
 
 																</div>
 
@@ -9350,51 +9508,104 @@ flexibility(document.documentElement);
 
 
 
-									<section
-										class="elementor-section elementor-top-section elementor-element elementor-element-4552cb2d elementor-section-boxed elementor-section-height-default elementor-section-height-default"
-										data-id="4552cb2d" data-element_type="section"
-										data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
-										<div class="elementor-container elementor-column-gap-default">
-											<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-473fbe60"
-												data-id="473fbe60" data-element_type="column"
-												data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
-												<div class="elementor-widget-wrap elementor-element-populated">
-													<div class="elementor-element elementor-element-6a2325ed elementor-widget elementor-widget-heading"
-														data-id="6a2325ed" data-element_type="widget"
-														data-widget_type="heading.default">
-														<div class="elementor-widget-container">
-															<h2 class="elementor-heading-title elementor-size-default">
-																Our platform is designed with unmatched flexibility,
-																tailored specifically for your healthcare needs</h2>
-														</div>
-													</div>
-													<div class="elementor-element elementor-element-643ebf85 elementor-widget elementor-widget-text-editor"
-														data-id="643ebf85" data-element_type="widget"
-														data-widget_type="text-editor.default">
-														<div class="elementor-widget-container">
-															<p>Make 3Engineers your own. Customise plans as per your
-																requirements.</p>
-														</div>
-													</div>
-													<div class="elementor-element elementor-element-3dbdd11b elementor-align-center elementor-widget elementor-widget-button"
-														data-id="3dbdd11b" data-element_type="widget"
-														data-widget_type="button.default">
-														<div class="elementor-widget-container">
-															<div class="elementor-button-wrapper">
-																<a class="elementor-button elementor-button-link elementor-size-sm"
-																	href="#">
-																	<span class="elementor-button-content-wrapper">
-																		<span
-																			class="elementor-button-text">Enquiry</span>
-																	</span>
-																</a>
-															</div>
-														</div>
-													</div>
-												</div>
-											</div>
-										</div>
-									</section>
+									<section class="flexible-healthcare-section">
+  <div class="container">
+    <h2 class="section-heading">
+      Our platform is designed with unmatched flexibility, tailored specifically for your healthcare needs
+    </h2>
+
+    <p class="section-subtext">
+      Make <span class="highlight">3Engineers</span> your own — customize plans as per your unique requirements.
+    </p>
+
+    <a href="#" class="cta-button">Enquiry</a>
+  </div>
+</section>
+
+<style>
+  .flexible-healthcare-section {
+     background: #eef2f5;
+    padding: 80px 20px;
+    text-align: center;
+    border-radius: 16px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    margin: 40px auto;
+    max-width: 1000px;
+  }
+
+  .flexible-healthcare-section .container {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  .section-heading {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #1a1a1a;
+    line-height: 1.4;
+    margin-bottom: 20px;
+  }
+
+  .section-subtext {
+    font-size: 1.1rem;
+    color: #555;
+    margin-bottom: 40px;
+  }
+
+  .highlight {
+    color: #1A998A;
+    font-weight: 600;
+  }
+
+  .cta-button {
+    display: inline-block;
+    padding: 14px 36px;
+    background: #1A998A;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 30px;
+    transition: background 0.3s ease, transform 0.2s ease;
+  }
+
+  .cta-button:hover {
+    background: #157d72;
+    transform: translateY(-2px);
+  }
+
+  @media (max-width: 768px) {
+    .section-heading {
+      font-size: 1.6rem;
+      line-height: 1.5;
+    }
+
+    .section-subtext {
+      font-size: 1rem;
+      margin-bottom: 30px;
+    }
+
+    .cta-button {
+      padding: 12px 28px;
+      font-size: 0.95rem;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .flexible-healthcare-section {
+      padding: 60px 15px;
+    }
+
+    .section-heading {
+      font-size: 1.4rem;
+    }
+
+    .section-subtext {
+      font-size: 0.95rem;
+    }
+  }
+</style>
+
 								</div>
 
 
@@ -9412,10 +9623,16 @@ flexibility(document.documentElement);
 
 
 			</div> <!-- ast-container -->
+
+
 		</div><!-- #content -->
 		<div data-elementor-type="footer" data-elementor-id="4519"
 			class="elementor elementor-4519 elementor-location-footer" data-elementor-post-type="elementor_library">
-			<section
+			
+   
+
+  
+<section
 				class="elementor-section elementor-top-section elementor-element elementor-element-c6f7c0c elementor-section-boxed elementor-section-height-default elementor-section-height-default"
 				data-id="c6f7c0c" data-element_type="section"
 				data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
@@ -9541,13 +9758,6 @@ flexibility(document.documentElement);
 						<div class="elementor-widget-wrap elementor-element-populated">
 							<div class="elementor-element elementor-element-bbc9aac elementor-widget elementor-widget-heading"
 								data-id="bbc9aac" data-element_type="widget" data-widget_type="heading.default">
-								<div class="elementor-widget-container">
-									<h5 class="elementor-heading-title elementor-size-small">
-										<a href="#">Role-Based
-											Interfaces</a><br><br><a href="#">Patient
-											Communication</a><br><br>
-									</h5>
-								</div>
 							</div>
 							<div class="elementor-element elementor-element-99ee7f5 elementor-widget elementor-widget-spacer"
 								data-id="99ee7f5" data-element_type="widget" data-widget_type="spacer.default">
@@ -9598,7 +9808,7 @@ flexibility(document.documentElement);
 							<div class="elementor-element elementor-element-6964114 elementor-widget elementor-widget-text-editor"
 								data-id="6964114" data-element_type="widget" data-widget_type="text-editor.default">
 								<div class="elementor-widget-container">
-									nitin@3engineers.in</div>
+									nitin@3engineers.in  hr@3engineers.in</div>
 							</div>
 							<section
 								class="elementor-section elementor-inner-section elementor-element elementor-element-21f5037 elementor-section-boxed elementor-section-height-default elementor-section-height-default"
@@ -9639,7 +9849,7 @@ flexibility(document.documentElement);
 
 
 															<p class="elementor-icon-box-description">
-																Varanasi, Uttar Pradesh, India</p>
+																Varanasi, Uttar Pradesh, India, Pincode - 221002</p>
 
 														</div>
 
